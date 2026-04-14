@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;   /* keep horizontal centering */
+    align-items: flex-start;   /* move to top */
+
+    padding-top: 275px;        /* controls how far from top */
+
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-container h1 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+
+    color: #708090;
+
+    /* inflated / pillowy look */
+    text-shadow:
+        0 1px 0 #ffffff,
+        0 2px 0 #ede9fe,
+        0 3px 0 #ddd6fe,
+        0 4px 8px rgba(124, 58, 237, 0.18);
+
+    font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+#search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+#search-btn {
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: lightgray;
+       
+}
+
+/* Wider input */
+#url-input {
+    width: 600px;          /* increased width */
+    max-width: 90vw;       /* keeps it responsive */
+
+    padding: 14px 20px;
+    font-size: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 30px;
+
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* nicer focus effect */
+#url-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+}
