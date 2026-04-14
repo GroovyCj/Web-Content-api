@@ -46,26 +46,25 @@ The goal of this project is to demonstrate:
 
 ## Project Structure
 
-
+```
 web_ingestion_api/
 │
 ├── app/
-│ ├── main.py
-│ ├── database.py
-│ ├── models.py
-│ ├── schemas.py
-│ ├── ingest.py
-│ └── parser.py
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── ingest.py
+│   └── parser.py
 │
 ├── static/
-│ ├── index.html
-│ ├── styles.css
-│ └── scripts.js
+│   ├── index.html
+│   ├── styles.css
+│   └── scripts.js
 │
 ├── requirements.txt
 └── README.md
-
-
+```
 
 ---
 
@@ -87,21 +86,40 @@ Content-Type: application/json
 {
   "url": "https://google.com"
 }
+```
 
+---
 
-Example Response
+## Example Response
+
+```json
 {
   "status": "received",
   "url": "https://google.com"
 }
-Getting Started
-1. Install dependencies
-pip install -r requirements.txt
-2. Run FastAPI server
-uvicorn app.main:app --reload
-3. Open frontend
+```
 
-Open index.html in your browser (or use Live Server).
+---
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run FastAPI server
+
+```bash
+uvicorn app.main:app --reload
+```
+
+### 3. Open frontend
+
+Open `index.html` in your browser (or use Live Server).
+
+---
 
 ## Virtual Environment Setup
 
@@ -109,50 +127,78 @@ This project uses a Python virtual environment to isolate dependencies.
 
 ### Create the virtual environment
 
-From the project root, run:
-
 ```bash
 python -m venv venv
+```
 
+---
 
-##Activate the virtual environment
+### Activate the virtual environment
 
-# Windows PowerShell
+#### Windows PowerShell
+
+```powershell
 venv\Scripts\Activate
+```
 
-If PowerShell blocks script execution, run this once:
+If PowerShell blocks script execution:
 
+```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 Then activate again:
 
+```powershell
 venv\Scripts\Activate
+```
 
-# Windows Command Prompt
-```Cmdlet
+---
+
+#### Windows Command Prompt
+
+```cmd
 venv\Scripts\activate.bat
+```
 
+---
 
-# Verify the virtual environment is active
+#### macOS / Linux
 
-Once activated, your terminal should show (venv) before the prompt.
+```bash
+source venv/bin/activate
+```
 
-Example:
+---
 
+### Verify the virtual environment is active
+
+You should see:
+
+```
 (venv) C:\Users\YourName\Web-Content-api>
+```
 
-# Install dependencies
+---
 
+### Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Run the application
+---
 
+### Run the application
+
+```bash
 uvicorn app.main:app --reload
+```
 
+---
 
+### Deactivate the virtual environment
 
-# Deactivate the virtual environment
-
-When finished, run:
-
+```bash
 deactivate
+```
