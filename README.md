@@ -102,3 +102,57 @@ uvicorn app.main:app --reload
 3. Open frontend
 
 Open index.html in your browser (or use Live Server).
+
+## Virtual Environment Setup
+
+This project uses a Python virtual environment to isolate dependencies.
+
+### Create the virtual environment
+
+From the project root, run:
+
+```bash
+python -m venv venv
+
+
+##Activate the virtual environment
+
+# Windows PowerShell
+venv\Scripts\Activate
+
+If PowerShell blocks script execution, run this once:
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Then activate again:
+
+venv\Scripts\Activate
+
+# Windows Command Prompt
+```Cmdlet
+venv\Scripts\activate.bat
+
+
+# Verify the virtual environment is active
+
+Once activated, your terminal should show (venv) before the prompt.
+
+Example:
+
+(venv) C:\Users\YourName\Web-Content-api>
+
+# Install dependencies
+
+pip install -r requirements.txt
+
+# Run the application
+
+uvicorn app.main:app --reload
+
+
+
+# Deactivate the virtual environment
+
+When finished, run:
+
+deactivate
